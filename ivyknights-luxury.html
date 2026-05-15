@@ -1,0 +1,1600 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivy Knights | Luxury Live Jazz Vocalist</title>
+  <meta
+    name="description"
+    content="A luxury homepage for Ivy Knights, presenting live jazz vocals for weddings, private events, and corporate evenings with elegant structure, clear positioning, and richer storytelling."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #0f0d0a;
+      --bg-soft: #181511;
+      --panel: rgba(255, 248, 238, 0.05);
+      --panel-strong: rgba(255, 248, 238, 0.08);
+      --line: rgba(232, 210, 170, 0.2);
+      --text: #f7f1e8;
+      --muted: #c8bcad;
+      --gold: #d8b372;
+      --gold-strong: #e5c58f;
+      --green: #30433c;
+      --green-soft: #1d2723;
+      --rose: #5f4039;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        conic-gradient(from 180deg at 18% 12%, rgba(216, 179, 114, 0.07), transparent 18%, transparent 68%, rgba(48, 67, 60, 0.08) 88%, transparent 100%),
+        radial-gradient(circle at top left, rgba(216, 179, 114, 0.08), transparent 24%),
+        radial-gradient(circle at 85% 10%, rgba(48, 67, 60, 0.18), transparent 30%),
+        linear-gradient(180deg, #0b0907 0%, #100d0a 100%);
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
+      opacity: 0.25;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-shell {
+      position: relative;
+      z-index: 1;
+      padding: 18px 0 42px;
+    }
+
+    .site-shell::before,
+    .site-shell::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      border: 1px solid rgba(255, 236, 204, 0.08);
+      opacity: 0.42;
+    }
+
+    .site-shell::before {
+      width: 320px;
+      height: 320px;
+      right: -120px;
+      top: 120px;
+      border-radius: 50%;
+    }
+
+    .site-shell::after {
+      width: 220px;
+      height: 220px;
+      left: -90px;
+      bottom: 120px;
+      border-radius: 34px;
+      transform: rotate(18deg);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 14px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 22px;
+      margin-bottom: 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(15, 13, 10, 0.78);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #f3d7a6);
+      box-shadow: 0 0 18px rgba(216, 179, 114, 0.55);
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #24170c;
+      font-weight: 600;
+      box-shadow: 0 18px 36px rgba(216, 179, 114, 0.18);
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(255, 248, 238, 0.04);
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .eyebrow {
+      margin-bottom: 16px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    h1,
+    h2,
+    .quote-mark {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    h1 {
+      font-size: clamp(3.4rem, 7.2vw, 6.8rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      max-width: 9.5ch;
+    }
+
+    h2 {
+      font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      max-width: 12ch;
+    }
+
+    h3 {
+      font-size: 1.14rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 26px;
+      align-items: stretch;
+      min-height: calc(100vh - 120px);
+    }
+
+    .hero-copy,
+    .hero-visual {
+      min-width: 0;
+    }
+
+    .hero-copy {
+      display: grid;
+      align-content: center;
+      padding: 22px 0;
+      position: relative;
+    }
+
+    .hero-copy::before {
+      content: "Ivy";
+      position: absolute;
+      left: -8px;
+      top: -28px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(5rem, 11vw, 10rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      color: rgba(255, 236, 204, 0.05);
+      pointer-events: none;
+    }
+
+    .hero-lead {
+      max-width: 58ch;
+      margin: 24px 0 30px;
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-note span {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 248, 238, 0.03);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-stage,
+    .footer {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stage {
+      position: relative;
+      height: 100%;
+      min-height: 700px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+
+    .hero-stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 34px 34px;
+      opacity: 0.18;
+      mask-image: linear-gradient(180deg, black, rgba(0,0,0,0.25));
+    }
+
+    .hero-stage::after {
+      content: "";
+      position: absolute;
+      inset: 38px 30px auto auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 236, 204, 0.16);
+      opacity: 0.45;
+      box-shadow:
+        0 0 0 20px rgba(255, 236, 204, 0.03),
+        0 0 0 44px rgba(255, 236, 204, 0.02);
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      filter: saturate(0.95) contrast(1.02);
+    }
+
+    .hero-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8, 7, 5, 0.08) 0%, rgba(8, 7, 5, 0.24) 44%, rgba(8, 7, 5, 0.82) 100%),
+        linear-gradient(90deg, rgba(9, 8, 6, 0.2), rgba(9, 8, 6, 0));
+    }
+
+    .hero-card {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      display: grid;
+      gap: 16px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(10, 10, 8, 0.74);
+      border: 1px solid rgba(255, 236, 204, 0.14);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+    }
+
+    .hero-ornament {
+      position: absolute;
+      border: 1px solid rgba(255, 236, 204, 0.12);
+      pointer-events: none;
+    }
+
+    .hero-ornament-one {
+      inset: 34px auto auto 28px;
+      width: 150px;
+      height: 190px;
+      border-radius: 30px 30px 110px 30px;
+      background: linear-gradient(180deg, rgba(216, 179, 114, 0.1), rgba(255, 248, 238, 0.02));
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-ornament-two {
+      right: 26px;
+      bottom: 166px;
+      width: 84px;
+      height: 84px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(48, 67, 60, 0.28), rgba(255, 248, 238, 0.02));
+      transform: rotate(14deg);
+    }
+
+    .hero-mini-frame {
+      position: absolute;
+      right: 34px;
+      top: 82px;
+      width: 176px;
+      padding: 10px;
+      border-radius: 24px;
+      background: rgba(11, 10, 8, 0.68);
+      border: 1px solid rgba(255, 236, 204, 0.14);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-mini-frame img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .hero-mini-frame span {
+      display: block;
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero-card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 236, 204, 0.14);
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(216, 179, 114, 0.1);
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .hero-card-grid div {
+      padding: 14px 0 0;
+      border-radius: 0;
+      background: none;
+      border: 0;
+      border-top: 1px solid rgba(255, 248, 238, 0.12);
+    }
+
+    .hero-card-grid strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .hero-card-grid span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 42px;
+      position: relative;
+    }
+
+    .section-head p {
+      max-width: 64ch;
+      font-size: 1.02rem;
+      line-height: 1.9;
+    }
+
+    .section-head::after {
+      content: "";
+      width: 96px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-top: 10px;
+    }
+
+    .section-frame {
+      position: relative;
+    }
+
+    .section-frame::before {
+      content: "";
+      position: absolute;
+      inset: -18px -10px auto auto;
+      width: 140px;
+      height: 140px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 236, 204, 0.08);
+      transform: rotate(14deg);
+      pointer-events: none;
+    }
+
+    .service-grid,
+    .offer-grid,
+    .proof-grid,
+    .experience-grid,
+    .testimonial-grid,
+    .foot-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 34px;
+    }
+
+    .panel {
+      position: relative;
+    }
+
+    .service-grid .panel {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      overflow: visible;
+    }
+
+    .service-media {
+      height: 340px;
+      margin: 0 0 22px;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 236, 204, 0.1);
+      position: relative;
+      background: var(--green-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .service-media::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255, 236, 204, 0.12);
+      border-radius: 22px;
+      z-index: 1;
+    }
+
+    .service-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.88;
+    }
+
+    .service-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11, 10, 8, 0.08), rgba(11, 10, 8, 0.38));
+    }
+
+    .service-grid .panel h3,
+    .service-grid .panel p {
+      padding-right: 10px;
+    }
+
+    .service-grid .panel h3 {
+      font-size: 1.28rem;
+    }
+
+    .service-grid .panel:nth-child(2) {
+      margin-top: 44px;
+    }
+
+    .icon-badge {
+      width: 46px;
+      height: 46px;
+      margin-bottom: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      color: var(--gold);
+      background: rgba(216, 179, 114, 0.08);
+    }
+
+    .icon-badge svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .offer-wrap {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .about-figure {
+      position: relative;
+      min-height: 400px;
+      margin-bottom: 26px;
+    }
+
+    .about-figure-main,
+    .about-figure-detail {
+      position: absolute;
+      overflow: hidden;
+      border: 1px solid rgba(255, 236, 204, 0.12);
+      box-shadow: var(--shadow);
+      background: rgba(11, 10, 8, 0.7);
+    }
+
+    .about-figure-main {
+      inset: 0 90px 34px 0;
+      border-radius: 34px;
+    }
+
+    .about-figure-detail {
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      height: 240px;
+      border-radius: 26px;
+      padding: 10px;
+      transform: rotate(6deg);
+    }
+
+    .about-figure-main img,
+    .about-figure-detail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-figure-main img {
+      filter: saturate(0.95) contrast(1.02);
+    }
+
+    .about-figure-detail img {
+      border-radius: 18px;
+      object-position: center 22%;
+    }
+
+    .about-figure-mark {
+      position: absolute;
+      left: -12px;
+      bottom: 52px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 236, 204, 0.14);
+      background: rgba(11, 10, 8, 0.74);
+      color: var(--text);
+      font-size: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .about-figure::after {
+      content: "";
+      position: absolute;
+      right: 46px;
+      top: -18px;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(216, 179, 114, 0.34), rgba(255, 248, 238, 0.02) 70%);
+      filter: blur(2px);
+    }
+
+    .offer-wrap > .panel {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      overflow: visible;
+    }
+
+    .offer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 26px 32px;
+    }
+
+    .offer-card {
+      padding: 22px 0 0;
+      border-radius: 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+      background: none;
+    }
+
+    .offer-card strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .feature-list span {
+      display: block;
+      padding-left: 18px;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .feature-list span::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 14px rgba(216, 179, 114, 0.4);
+    }
+
+    .proof-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px;
+      position: relative;
+    }
+
+    .proof-grid::before {
+      content: "Atmosphere";
+      position: absolute;
+      right: 10px;
+      top: -118px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      letter-spacing: -0.05em;
+      color: rgba(255, 236, 204, 0.035);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .experience-grid {
+      grid-template-columns: 0.82fr 1.18fr;
+      align-items: start;
+      gap: 34px;
+    }
+
+    .experience-intro {
+      padding: 30px 42px 30px 0;
+      border-radius: 0;
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: none;
+    }
+
+    .experience-intro p + p {
+      margin-top: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 22px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      padding: 0 0 26px 28px;
+      border-radius: 0;
+      border: 0;
+      border-left: 1px solid var(--line);
+      background: none;
+      align-items: start;
+    }
+
+    .timeline-label {
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .timeline-item > div:last-child {
+      min-width: 0;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--text);
+      font-size: 1.12rem;
+      line-height: 1.35;
+    }
+
+    .stat-panel {
+      padding: 20px 0 0;
+      border-radius: 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+      background: none;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat-panel::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 236, 204, 0.14);
+      background: radial-gradient(circle at 35% 35%, rgba(216, 179, 114, 0.24), rgba(255, 248, 238, 0.02));
+    }
+
+    .stat-panel strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 34px;
+      align-items: start;
+    }
+
+    .testimonial {
+      padding: 26px 0 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 18px;
+      background: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      position: relative;
+    }
+
+    .testimonial::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .quote-mark {
+      color: rgba(216, 179, 114, 0.5);
+      font-size: 3.2rem;
+      line-height: 0.8;
+    }
+
+    .testimonial p:first-of-type {
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .testimonial cite {
+      font-style: normal;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 42px;
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      align-items: stretch;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: block;
+      padding: 18px 0;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: none;
+      color: var(--muted);
+    }
+
+    .contact-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .contact-aside {
+      border-radius: 30px;
+      padding: 34px;
+      background:
+        linear-gradient(180deg, rgba(48, 67, 60, 0.5), rgba(19, 25, 23, 0.78)),
+        url("https://static.wixstatic.com/media/d7e815febdfe4be790fdd3e25572dda7.jpg/v1/fill/w_800,h_900,al_c,q_85,enc_avif,quality_auto/d7e815febdfe4be790fdd3e25572dda7.jpg")
+        center / cover no-repeat;
+      border: 1px solid rgba(255, 236, 204, 0.12);
+      min-height: 320px;
+      display: grid;
+      align-content: end;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .contact-aside::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255, 236, 204, 0.12);
+      border-radius: 22px;
+    }
+
+    .contact-aside::after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      right: -18px;
+      top: -18px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 236, 204, 0.14);
+      box-shadow: 0 0 0 16px rgba(255, 236, 204, 0.03);
+    }
+
+    .contact-aside h3 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-aside p {
+      color: #e6ddd2;
+    }
+
+    .footer {
+      margin-top: 34px;
+      padding: 36px;
+      border-radius: 30px;
+    }
+
+    .foot-grid {
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      align-items: start;
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      padding: 28px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 236, 204, 0.12);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(216, 179, 114, 0.08), rgba(48, 67, 60, 0.12)),
+        rgba(255, 248, 238, 0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-cta::after {
+      content: "Ivy";
+      position: absolute;
+      right: 26px;
+      bottom: -28px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 7rem;
+      line-height: 1;
+      color: rgba(255, 236, 204, 0.05);
+      pointer-events: none;
+    }
+
+    .footer::before {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 1px;
+      margin-bottom: 28px;
+      background: linear-gradient(90deg, rgba(255, 236, 204, 0.55), transparent);
+    }
+
+    .footer-cta h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-cta p {
+      max-width: 54ch;
+    }
+
+    .footer-cta-actions {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .footer-meta span {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 248, 238, 0.03);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .footer small,
+    .footer a,
+    .footer p {
+      color: var(--muted);
+    }
+
+    .footer .btn-primary {
+      color: #24170c;
+    }
+
+    .footer .btn-secondary {
+      color: var(--text);
+    }
+
+    .footer nav {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-title {
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1080px) {
+      .hero,
+      .offer-wrap,
+      .contact-card,
+      .footer-cta,
+      .foot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid,
+      .proof-grid,
+      .experience-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .experience-intro {
+        padding: 0 0 28px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(var(--container), calc(100% - 20px));
+      }
+
+      .topbar {
+        position: static;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-stage {
+        min-height: 520px;
+      }
+
+      .hero-card {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .hero-stage::after,
+      .hero-ornament,
+      .hero-mini-frame,
+      .about-figure-detail,
+      .about-figure-mark,
+      .footer-cta::after,
+      .hero-copy::before,
+      .proof-grid::before,
+      .contact-aside::after,
+      .site-shell::before,
+      .site-shell::after,
+      .section-frame::before {
+        display: none;
+      }
+
+      .hero-card-grid,
+      .service-grid,
+      .offer-grid,
+      .proof-grid,
+      .experience-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-left: 18px;
+      }
+
+      .service-media {
+        height: 220px;
+        margin: 0 0 20px;
+      }
+
+      .contact-card,
+      .offer-wrap {
+        gap: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a href="#top" class="brand">
+          <span class="brand-mark"></span>
+          <span>Ivy Knights</span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#services">Events</a>
+          <a href="#experience">Experience</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Enquire Now</a>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Luxury Jazz Vocalist</div>
+            <h1>Jazz vocals for the kind of evening guests never forget.</h1>
+            <p class="hero-lead">
+              Ivy Knights brings a poised, intimate, and beautifully controlled live sound to
+              weddings, private celebrations, and high-end corporate occasions. The result is
+              not simply live music, but a room that feels elevated from the first note.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Check availability</a>
+              <a class="btn btn-secondary" href="#services">Explore event options</a>
+            </div>
+            <div class="hero-note">
+              <span>Refined jazz standards</span>
+              <span>Elegant private events</span>
+              <span>Luxury weddings</span>
+              <span>UK and Europe</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-stage">
+              <img
+                class="hero-photo"
+                src="https://static.wixstatic.com/media/b86158_3ad09a8272be4cd6902e7aeae6d7424f~mv2_d_3840_5760_s_4_2.jpg/v1/fill/w_980,h_1470,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b86158_3ad09a8272be4cd6902e7aeae6d7424f~mv2_d_3840_5760_s_4_2.jpg"
+                alt="Ivy Knights performing live"
+              />
+              <div class="hero-ornament hero-ornament-one"></div>
+              <div class="hero-ornament hero-ornament-two"></div>
+              <div class="hero-mini-frame">
+                <img
+                  src="https://static.wixstatic.com/media/d7e815febdfe4be790fdd3e25572dda7.jpg/v1/fill/w_600,h_760,al_c,q_85,enc_avif,quality_auto/d7e815febdfe4be790fdd3e25572dda7.jpg"
+                  alt="Ivy Knights performance detail"
+                />
+                <span>Live atmosphere</span>
+              </div>
+              <div class="hero-shade"></div>
+              <div class="hero-card">
+                <div class="hero-card-top">
+                  <span class="hero-chip">Signature booking experience</span>
+                  <span class="hero-chip">Jazz for every occasion</span>
+                </div>
+                <div class="hero-card-grid">
+                  <div>
+                    <strong>Beautifully tailored</strong>
+                    <span>From champagne receptions to fuller evening sets with real presence.</span>
+                  </div>
+                  <div>
+                    <strong>Professionally delivered</strong>
+                    <span>Clear communication, trusted musicians, and a calm premium booking process.</span>
+                  </div>
+                  <div>
+                    <strong>Atmosphere first</strong>
+                    <span>Music chosen to complement the room, never overwhelm it or flatten it.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-frame" id="about">
+          <div class="section-head">
+            <div class="eyebrow">About Ivy</div>
+            <h2>Conservatoire-trained vocals with warmth, poise, and presence.</h2>
+            <p>
+              Ivy Knights is a jazz vocalist with high-level live experience across the UK and Europe.
+              She has performed with major artists, trained at Guildhall School of Music and Drama,
+              and brings that same musical standard to weddings, celebrations, and sophisticated event settings.
+            </p>
+          </div>
+
+          <div class="offer-wrap">
+            <div class="panel">
+              <div class="about-figure">
+                <div class="about-figure-main">
+                  <img
+                    src="https://static.wixstatic.com/media/b1c6fe7027df438183e0ef62ef07b6aa.jpg/v1/fill/w_900,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b1c6fe7027df438183e0ef62ef07b6aa.jpg"
+                    alt="Ivy Knights in an elegant performance setting"
+                  />
+                </div>
+                <div class="about-figure-detail">
+                  <img
+                    src="https://static.wixstatic.com/media/b86158_3ad09a8272be4cd6902e7aeae6d7424f~mv2_d_3840_5760_s_4_2.jpg/v1/fill/w_520,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b86158_3ad09a8272be4cd6902e7aeae6d7424f~mv2_d_3840_5760_s_4_2.jpg"
+                    alt="Portrait of Ivy Knights"
+                  />
+                </div>
+                <div class="about-figure-mark">Guildhall trained</div>
+              </div>
+              <h3>Why clients book Ivy</h3>
+              <p>
+                The difference is not only the voice, but the judgement behind it. Ivy brings
+                musical quality, calm professionalism, and an instinct for reading the room so
+                every part of the occasion feels more elevated.
+              </p>
+              <div class="feature-list">
+                <span>Luxury positioning that feels confident rather than crowded</span>
+                <span>Copy centered on guest experience, tone, and trust</span>
+                <span>Credentials presented with elegance, not overload</span>
+                <span>A richer editorial visual language with warmth and depth</span>
+              </div>
+            </div>
+
+            <div class="offer-grid">
+              <div class="offer-card">
+                <strong>Wedding music</strong>
+                <p>Live vocals for ceremonies, drinks receptions, wedding breakfasts, and evening celebrations with understated glamour.</p>
+              </div>
+              <div class="offer-card">
+                <strong>Private parties</strong>
+                <p>Stylish jazz for birthdays, anniversaries, private dining rooms, and beautifully hosted celebrations.</p>
+              </div>
+              <div class="offer-card">
+                <strong>Corporate events</strong>
+                <p>Refined entertainment for dinners, launches, receptions, and brand hospitality that needs sophistication without stiffness.</p>
+              </div>
+              <div class="offer-card">
+                <strong>Flexible formats</strong>
+                <p>Acoustic, stripped-back, cocktail-hour, or fuller band formats depending on space, energy, and pacing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-frame" id="services">
+          <div class="section-head">
+            <div class="eyebrow">Event Styles</div>
+            <h2>Music designed to shape the room, not simply fill it.</h2>
+            <p>
+              The strongest event entertainment feels seamless. Each option is designed to help
+              clients quickly see what suits the setting, the guest experience, and the pace of the day.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="panel">
+              <div class="service-media">
+                <img
+                  src="https://static.wixstatic.com/media/b1c6fe7027df438183e0ef62ef07b6aa.jpg/v1/fill/w_900,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b1c6fe7027df438183e0ef62ef07b6aa.jpg"
+                  alt="Elegant wedding performance setting"
+                />
+              </div>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-6.5-4.35-8.67-8.11A4.98 4.98 0 0 1 7.62 5c1.9 0 3.07 1.03 4.38 2.54C13.31 6.03 14.48 5 16.38 5a4.98 4.98 0 0 1 4.29 7.89C18.5 16.65 12 21 12 21z"/></svg>
+              </span>
+              <h3>Weddings with polish</h3>
+              <p>From aisle moments to candlelit receptions, the sound stays romantic, elevated, and beautifully guest-friendly.</p>
+            </article>
+
+            <article class="panel">
+              <div class="service-media">
+                <img
+                  src="https://static.wixstatic.com/media/d7e815febdfe4be790fdd3e25572dda7.jpg/v1/fill/w_900,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d7e815febdfe4be790fdd3e25572dda7.jpg"
+                  alt="Jazz performance at a private event"
+                />
+              </div>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 7h12M6 12h12M6 17h7"/><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
+              </span>
+              <h3>Private events with atmosphere</h3>
+              <p>Ideal for hosts who want guests to feel looked after, impressed, and effortlessly immersed from the first set onward.</p>
+            </article>
+
+            <article class="panel">
+              <div class="service-media">
+                <img
+                  src="https://static.wixstatic.com/media/b86158_3ad09a8272be4cd6902e7aeae6d7424f~mv2_d_3840_5760_s_4_2.jpg/v1/fill/w_900,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b86158_3ad09a8272be4cd6902e7aeae6d7424f~mv2_d_3840_5760_s_4_2.jpg"
+                  alt="Luxury live vocalist for formal occasions"
+                />
+              </div>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 7V5a4 4 0 0 1 8 0v2"/><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 11v4"/></svg>
+              </span>
+              <h3>Corporate hospitality that feels premium</h3>
+              <p>A smart fit for receptions, gala dinners, and brand-led evenings that need sophistication without stiffness.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-frame" id="experience">
+          <div class="section-head">
+            <div class="eyebrow">Experience</div>
+            <h2>The kind of credibility that makes booking feel easy.</h2>
+            <p>
+              A strong booking decision usually comes down to trust. These details bring together
+              Ivy's training, performance background, and event fluency in one refined view.
+            </p>
+          </div>
+
+          <div class="experience-grid">
+            <div class="experience-intro">
+              <div class="eyebrow">Signature Quality</div>
+              <h3>Luxury clients are not only booking a voice. They are booking judgement.</h3>
+              <p>
+                The difference is in taste, pacing, and atmosphere. What to sing, when to hold back,
+                when to lift the room, and how to make the music feel naturally part of the occasion.
+              </p>
+              <p>
+                That level of judgement is what turns live music into something that feels effortless,
+                refined, and completely at home in the room.
+              </p>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-label">Training</div>
+                <div>
+                  <strong>Guildhall School of Music and Drama</strong>
+                  <p>MA in Jazz Vocals from one of the UK's most respected conservatoires.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-label">Performance</div>
+                <div>
+                  <strong>High-level stage and event experience</strong>
+                  <p>Performances across luxury venues, formal events, and international occasions in the UK and Europe.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-label">Credits</div>
+                <div>
+                  <strong>Work alongside major artists</strong>
+                  <p>Experience connected to artists including Justin Timberlake, The 1975, and Emeli Sande.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-label">Formats</div>
+                <div>
+                  <strong>Flexible musical direction</strong>
+                  <p>Acoustic jazz, elegant cocktail-hour sets, and larger-scale evening performances with supporting musicians.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-frame">
+          <div class="section-head">
+            <div class="eyebrow">Event Flow</div>
+            <h2>Music that can move gracefully with the rhythm of the day.</h2>
+            <p>
+              From the first arrival drink to the later mood of the evening, each part of the event
+              can be shaped with the right level of presence, warmth, and energy.
+            </p>
+          </div>
+
+          <div class="proof-grid">
+            <div class="stat-panel">
+              <strong>Arrival</strong>
+              <span>Soft live jazz to set the tone as guests enter and settle.</span>
+            </div>
+            <div class="stat-panel">
+              <strong>Reception</strong>
+              <span>Elegant background sets for drinks, conversation, and warm atmosphere.</span>
+            </div>
+            <div class="stat-panel">
+              <strong>Dinner</strong>
+              <span>Understated vocals that elevate the room without taking over the table.</span>
+            </div>
+            <div class="stat-panel">
+              <strong>Evening</strong>
+              <span>A richer energy when the occasion calls for something more memorable and alive.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-frame" id="testimonials">
+          <div class="section-head">
+            <div class="eyebrow">Testimonials</div>
+            <h2>What clients remember is how the room felt.</h2>
+            <p>
+              The best feedback always speaks to more than vocal quality. It reflects atmosphere,
+              confidence, and the feeling that the evening was elevated in exactly the right way.
+            </p>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial">
+              <div class="quote-mark">"</div>
+              <p>
+                Ivy was the perfect start to the evening. Her voice felt soulful, stylish, and beautifully judged for the room. She made the whole event feel more special.
+              </p>
+              <cite>Hephzi Pemberton, Kiteka Foundation</cite>
+            </article>
+
+            <article class="testimonial">
+              <div class="quote-mark">"</div>
+              <p>
+                We hired Ivy for a Great Gatsby themed celebration and she absolutely delivered. Guests were engaged, the atmosphere was right, and the performance had real class.
+              </p>
+              <cite>Amy Ward, British Dental Association</cite>
+            </article>
+
+            <article class="testimonial">
+              <div class="quote-mark">"</div>
+              <p>
+                Everyone kept commenting on how incredible Ivy sounded. She brought warmth, confidence, and that rare feeling that the music belonged exactly where it was.
+              </p>
+              <cite>Grace Fothergill, Wooldridge Group</cite>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-frame" id="contact">
+          <div class="contact-card">
+            <div class="contact-copy">
+              <div class="eyebrow">Enquiries</div>
+              <h2>Ready to create the right atmosphere for your event?</h2>
+              <p>
+                Whether the brief is romantic, intimate, celebratory, or quietly impressive, the right
+                live music shapes how the entire evening is felt and remembered.
+              </p>
+              <div class="contact-list">
+                <a href="mailto:ivyknightsjazz@gmail.com">
+                <strong>Email</strong>
+                  ivyknightsjazz@gmail.com
+                </a>
+                <span>
+                  <strong>Best suited for</strong>
+                  Weddings, private parties, hotel events, luxury dinners, and corporate evenings
+                </span>
+                <span>
+                  <strong>Coverage</strong>
+                  UK bookings with select Europe travel
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-aside">
+              <h3>Luxury should feel effortless from the first enquiry.</h3>
+              <p>
+                A beautiful booking experience begins with clarity, confidence, and a homepage
+                that makes the offer feel as refined as the performance itself.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-cta">
+          <div>
+            <div class="eyebrow">Enquire</div>
+            <h3>Elegant events begin with a conversation that feels easy, clear, and personal.</h3>
+            <p>
+              For weddings, private celebrations, and refined corporate occasions, the booking
+              process should feel as polished as the performance itself, with a warm sense of
+              reassurance from the first message onward.
+            </p>
+            <div class="footer-meta">
+              <span>Luxury weddings</span>
+              <span>Private celebrations</span>
+              <span>Corporate evenings</span>
+            </div>
+          </div>
+          <div class="footer-cta-actions">
+            <a class="btn btn-primary" href="mailto:ivyknightsjazz@gmail.com">Email Ivy Knights</a>
+            <a class="btn btn-secondary" href="#contact">Return to enquiries</a>
+          </div>
+        </div>
+        <div class="foot-grid">
+          <div>
+            <div class="footer-title">Ivy Knights</div>
+            <p>
+              Live jazz vocals for weddings, private celebrations, and corporate evenings,
+              presented with elegance, clarity, and a more elevated booking experience.
+            </p>
+          </div>
+          <div>
+            <div class="footer-title">Sections</div>
+            <nav>
+              <a href="#about">About</a>
+              <a href="#services">Event styles</a>
+              <a href="#experience">Experience</a>
+              <a href="#contact">Enquire</a>
+            </nav>
+          </div>
+          <div>
+            <div class="footer-title">Contact</div>
+            <nav>
+              <a href="mailto:ivyknightsjazz@gmail.com">ivyknightsjazz@gmail.com</a>
+              <a href="https://www.ivyknights.com/" target="_blank" rel="noreferrer">Visit ivyknights.com</a>
+              <small>Available for UK bookings and select Europe travel</small>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
+

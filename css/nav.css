@@ -1,0 +1,70 @@
+.site-header{
+  position:fixed;top:0;left:0;right:0;
+  z-index:100;height:72px;
+  transition:background 0.35s,border-bottom 0.35s;
+}
+.site-header.scrolled{
+  background:rgba(15,15,15,0.96);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--color-border);
+}
+.nav-shell{
+  display:flex;align-items:center;
+  justify-content:space-between;height:100%;
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:8px;height:8px;border-radius:2px;background:var(--color-gold);flex-shrink:0}
+.logo-primary{
+  font-family:"Playfair Display",serif;
+  font-size:20px;font-weight:700;color:var(--color-text-primary);
+}
+.logo-secondary{
+  font-family:"Inter",sans-serif;
+  font-size:12px;font-weight:400;color:var(--color-text-secondary);
+}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{
+  font-size:14px;color:var(--color-text-secondary);
+  letter-spacing:0.02em;position:relative;transition:color 0.2s;
+}
+.nav-links a:not(.btn-secondary)::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:1px;background:var(--color-teal);transition:width 0.25s ease;
+}
+.nav-links a:not(.btn-secondary):hover{color:var(--color-text-primary)}
+.nav-links a:not(.btn-secondary):hover::after,
+.nav-links a:not(.btn-secondary).active::after{width:100%}
+.nav-links a.active:not(.btn-secondary){color:var(--color-teal)}
+.nav-links .btn-secondary{padding:10px 22px}
+.nav-sep{width:1px;height:20px;background:var(--color-border)}
+.nav-toggle{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:4px;
+}
+.nav-toggle span{
+  display:block;width:24px;height:2px;
+  background:var(--color-gold);border-radius:1px;
+  transition:transform 0.2s,opacity 0.2s;
+}
+.mobile-menu{
+  display:none;position:fixed;inset:0;
+  background:#0F0F0F;z-index:99;
+  flex-direction:column;align-items:center;justify-content:center;gap:28px;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  font-family:"Playfair Display",serif;
+  font-size:28px;font-weight:700;color:var(--color-text-primary);transition:color 0.2s;
+}
+.mobile-menu a:hover{color:var(--color-teal)}
+.mobile-close{
+  position:absolute;top:24px;right:28px;
+  background:none;border:none;color:var(--color-text-secondary);
+  font-size:32px;cursor:pointer;transition:color 0.2s;line-height:1;
+}
+.mobile-close:hover{color:var(--color-text-primary)}
+@media(max-width:768px){
+  .nav-links,.nav-sep{display:none}
+  .nav-toggle{display:flex}
+}
