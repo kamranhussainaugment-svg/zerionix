@@ -13,15 +13,22 @@
   display:flex;align-items:center;
   justify-content:space-between;height:100%;
 }
-.logo{display:flex;align-items:center;gap:10px}
-.logo-mark{width:8px;height:8px;border-radius:2px;background:var(--color-gold);flex-shrink:0}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:32px;height:32px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1}
 .logo-primary{
   font-family:"Playfair Display",serif;
-  font-size:20px;font-weight:700;color:var(--color-text-primary);
+  font-size:18px;font-weight:700;
+  color:var(--color-text-primary);
+  letter-spacing:-0.01em;
 }
 .logo-secondary{
   font-family:"Inter",sans-serif;
-  font-size:12px;font-weight:400;color:var(--color-text-secondary);
+  font-size:10px;font-weight:500;
+  color:var(--color-text-secondary);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-top:2px;
 }
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{
